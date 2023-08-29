@@ -30,7 +30,7 @@ public:
         s[i] == '-' ? (neg = true, i ++) : (s[i] == '+' ? i++ : neg = false);
         // 读取字符直到到达下一个非数字字符或到达输入的结尾
         while( i < len && isdigit(s[i])) {
-            if(ans / 10000000000 )
+            if(ans / 1000000000 )
                 return neg ? INT_MIN : INT_MAX;
             
             if(ans > INT_MAX / 10 || ans < INT_MIN / 10)
