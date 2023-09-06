@@ -49,31 +49,31 @@ public:
     }
 };
 
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        int len = nums.size();
-        int l = 0, r = len - 1;
+// class Solution {
+// public:
+//     int search(vector<int>& nums, int target) {
+//         int len = nums.size();
+//         int l = 0, r = len - 1;
 
-        if(len == 0) return -1;
+//         if(len == 0) return -1;
 
-        while(l < r) {
-            int mid = (l + r) >> 1;
-            if(nums[mid] == target) return mid;
+//         while(l < r) {
+//             int mid = (l + r) >> 1;
+//             if(nums[mid] == target) return mid;
 
-            if(nums[l] <= nums[mid]){    // 说明前半部分是有序的
-                if(target >= nums[l] && target <= nums[mid]) r = mid;
-                else l = mid + 1;
-            }
-            else {  // 后半部分是有序的
-                if(target >= nums[mid] && target <= nums[r]) l = mid;
-                else r = mid - 1;
-            }
-        }
-        if(nums[l] == target) return l;
-        return -1;
-    }
-};
+//             if(nums[l] <= nums[mid]){    // 说明前半部分是有序的
+//                 if(target >= nums[l] && target <= nums[mid]) r = mid;
+//                 else l = mid + 1;
+//             }
+//             else {  // 后半部分是有序的
+//                 if(target >= nums[mid] && target <= nums[r]) l = mid;
+//                 else r = mid - 1;
+//             }
+//         }
+//         if(nums[l] == target) return l;
+//         return -1;
+//     }
+// };
 
 int main() {
     
