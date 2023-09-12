@@ -22,8 +22,8 @@ public:
     int partition(vector<int>& nums, int l, int r) {
         if( l >= r )  return 0;
 
-        int mid = (l + r) >> 1;
         // 分成两部分，每部分内部的+两部分之间的逆序对
+        int mid = (l + ((r - l) >> 1));
         int ans = partition(nums, l, mid) + partition(nums, mid + 1, r);
         temp.clear();
         int i = l, j = mid + 1;
