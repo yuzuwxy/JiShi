@@ -11,9 +11,9 @@
 using namespace std;
 
 int main() {
-    int x, y;
-    while(cin >> x >> y) {
-        cout << x + y << endl;
-    }
+    string s = "1234567";
+    do {
+        cout << s << endl;
+    }while(next_permutation(s.begin(), s.end()));
     return 0;
 }
